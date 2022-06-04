@@ -1,9 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
-import hexlet.code.games.GCD;
-import hexlet.code.games.Progression;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
@@ -30,6 +27,9 @@ public class Engine {
             case 5:
                 Conditions = "What number is missing in the progression?";
                 break;
+            case 6:
+                Conditions = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+                break;
         }
         System.out.println(Conditions);
         for (int i = 0; i < 3; i++) {
@@ -45,6 +45,9 @@ public class Engine {
                     break;
                 case 5:
                     question_correct = Progression.question();
+                    break;
+                case 6:
+                    question_correct = Prime.question();
                     break;
             }
             if (question_correct[1] == null) {
