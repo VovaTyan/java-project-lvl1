@@ -1,27 +1,48 @@
 package hexlet.code;
 
+import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
 
 import java.util.Scanner;
 
 public class Engine {
-    public static void gameGames(int n) {
+    public static void gameGames(int numGame) {
         String Conditions = "";
         String[] question_correct = new String[2];
         String answer;
-        if (n == 2) {
-                Conditions = "Answer 'yes' if number even otherwise answer 'no'.";
-        }
         System.out.println("\nWelcome to the Brain games!");
         System.out.print("May I have your name? ");
         Scanner inName = new Scanner(System.in);
         String name = inName.nextLine();
         System.out.println("Hello, " + name + "!");
+        switch (numGame) {
+            case 2:
+                Conditions = "Answer 'yes' if number even otherwise answer 'no'.";
+                break;
+            case 3:
+                Conditions = "What is the result of the expression?";
+                break;
+            case 4:
+                Conditions = "Find the greatest common divisor of given numbers.";
+                break;
+        }
         System.out.println(Conditions);
         for (int i = 0; i < 3; i++) {
-            if (n == 2) {
-                question_correct = Even.question();
-              }
+            switch (numGame) {
+                case 2:
+                    question_correct = Even.question();
+                    break;
+                case 3:
+                    question_correct = Calc.question();
+                    break;
+                case 4:
+                    question_correct = GCD.question();
+                    break;
+            }
+            if (question_correct[1] == null) {
+                question_correct[1] = "0";
+            }
             System.out.println("Question: " + question_correct[0]);
             Scanner in1 = new Scanner(System.in);
             System.out.print("Your answer: ");
