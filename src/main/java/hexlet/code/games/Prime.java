@@ -4,6 +4,7 @@ public class Prime {
         String[] result = new String[2];
         var maxRandom = 99;
         var noPrime = 2;
+
         var random = 1 + (int) (Math.random() * maxRandom);
         result[0] = Integer.toString(random);
         result[1] = "yes";

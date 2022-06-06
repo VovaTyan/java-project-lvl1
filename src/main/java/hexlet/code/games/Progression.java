@@ -4,12 +4,12 @@ public class Progression {
         String[] result = new String[2];
         var maxRandom = 100;
         var maxAmount = 9;
-        var maxAmount2 = 9;
         var minAmount = 5;
         var stepRandom = 1;
+
         int random1 = (int) (Math.random() * maxRandom);
         int step = stepRandom + (int) (Math.random() * maxAmount);
-        int numbers = minAmount + (int) (Math.random() * maxAmount2);
+        int numbers = minAmount + (int) (Math.random() * maxAmount);
         int numberRandom = (int) (Math.random() * numbers);
         int num = random1;
         String numText;
