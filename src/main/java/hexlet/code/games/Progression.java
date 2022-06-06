@@ -12,12 +12,12 @@ public class Progression {
         String text = "";
         for (int i = 0; i <= numbers; i++) {
             if (i == number_random) {
-                text = text + " ..";
+                text = text + ".. ";
                 result[1] = Integer.toString(num);
             }
             else {
                 num_text = Integer.toString(num);
-                text = text + " " + num_text;
+                text = text + num_text + " ";
             }
             num = num + step;
         }
