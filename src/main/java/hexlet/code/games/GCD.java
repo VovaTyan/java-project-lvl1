@@ -1,5 +1,4 @@
 package hexlet.code.games;
-
 public class GCD {
     public static String[] question() {
         String[] result = new String[2];

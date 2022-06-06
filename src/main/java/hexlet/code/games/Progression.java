@@ -1,5 +1,4 @@
 package hexlet.code.games;
-
 public class Progression {
     public static String[] question() {
         String[] result = new String[2];
@@ -12,15 +11,15 @@ public class Progression {
         int numbers = minAmount + (int) (Math.random() * maxAmount);
         int numberRandom = (int) (Math.random() * numbers);
         int num = random1;
-        String num_text;
+        String numText;
         String text = "";
         for (int i = 0; i <= numbers; i++) {
             if (i == numberRandom) {
                 text = text + ".. ";
                 result[1] = Integer.toString(num);
             } else {
-                num_text = Integer.toString(num);
-                text = text + num_text + " ";
+                numText = Integer.toString(num);
+                text = text + numText + " ";
             }
             num = num + step;
         }
