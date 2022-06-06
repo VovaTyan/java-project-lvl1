@@ -2,12 +2,12 @@ package hexlet.code.games;
 public class Calc {
     public static String[] question() {
         String[] result = new String[2];
-        var maxRandom = 100;
-        var threeRandom = 3;
+        var maxInRandom = 100;
+        var threeInRandom = 3;
 
-        int random1 = (int) (Math.random() * maxRandom);
-        int random2 = (int) (Math.random() * maxRandom);
-        int randomMath = (int) (Math.random() * threeRandom);
+        int random1 = (int) (Math.random() * maxInRandom);
+        int random2 = (int) (Math.random() * maxInRandom);
+        int randomMath = (int) (Math.random() * threeInRandom);
         String num1 = Integer.toString(random1);
         String num2 = Integer.toString(random2);
         if (randomMath == 0) {

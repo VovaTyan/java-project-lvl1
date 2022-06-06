@@ -2,17 +2,17 @@ package hexlet.code.games;
 public class Prime {
     public static String[] question() {
         String[] result = new String[2];
-        var maxRandom = 99;
-        var noPrime = 2;
+        var maxInRandom = 99;
+        var noInPrime = 2;
 
-        var random = 1 + (int) (Math.random() * maxRandom);
+        var random = 1 + (int) (Math.random() * maxInRandom);
         result[0] = Integer.toString(random);
         result[1] = "yes";
-        if (random < noPrime) {
+        if (random < noInPrime) {
             result[1] = "no";
         }
-        for (int i = noPrime; i < random; i = i + 1) {
-            if (((random % i) == 0) && (random != noPrime)) {
+        for (int i = noInPrime; i < random; i = i + 1) {
+            if (((random % i) == 0) && (random != noInPrime)) {
                 result[1] = "no";
                 return result;
             }

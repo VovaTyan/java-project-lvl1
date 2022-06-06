@@ -15,36 +15,36 @@ public class Engine {
         Scanner inName = new Scanner(System.in);
         String name = inName.nextLine();
         System.out.println("Hello, " + name + "!");
-        var numberGame2 = 2;
-        var numberGame3 = 3;
-        var numberGame4 = 4;
-        var numberGame5 = 5;
-        var numberGame6 = 6;
+        var numberInGame2 = 2;
+        var numberInGame3 = 3;
+        var numberInGame4 = 4;
+        var numberInGame5 = 5;
+        var numberInGame6 = 6;
 
-        if (numGame == numberGame2) {
+        if (numGame == numberInGame2) {
             conditions = "Answer 'yes' if number even otherwise answer 'no'.";
-        } else if (numGame == numberGame3) {
+        } else if (numGame == numberInGame3) {
             conditions = "What is the result of the expression?";
-        } else if (numGame == numberGame4) {
+        } else if (numGame == numberInGame4) {
             conditions = "Find the greatest common divisor of given numbers.";
-        } else if (numGame == numberGame5) {
+        } else if (numGame == numberInGame5) {
             conditions = "What number is missing in the progression?";
-        } else if (numGame == numberGame6) {
+        } else if (numGame == numberInGame6) {
             conditions = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         }
         System.out.println(conditions);
         int attempts = 3;
 
         for (int i = 0; i < attempts; i++) {
-            if (numGame == numberGame2) {
+            if (numGame == numberInGame2) {
                 questionCorrect = Even.question();
-            } else if (numGame == numberGame3) {
+            } else if (numGame == numberInGame3) {
                 questionCorrect = Calc.question();
-            } else if (numGame == numberGame4) {
+            } else if (numGame == numberInGame4) {
                 questionCorrect = GCD.question();
-            } else if (numGame == numberGame5) {
+            } else if (numGame == numberInGame5) {
                 questionCorrect = Progression.question();
-            } else if (numGame == numberGame6) {
+            } else if (numGame == numberInGame6) {
                     questionCorrect = Prime.question();
             }
             if (questionCorrect[1] == null) {

@@ -2,10 +2,10 @@ package hexlet.code.games;
 public class GCD {
     public static String[] question() {
         String[] result = new String[2];
-        var maxRandom = 100;
+        var maxInRandom = 100;
 
-        var random1 = (int) (Math.random() * maxRandom);
-        var random2 = (int) (Math.random() * maxRandom);
+        var random1 = (int) (Math.random() * maxInRandom);
+        var random2 = (int) (Math.random() * maxInRandom);
         String num1 = Integer.toString(random1);
         String num2 = Integer.toString(random2);
         result[0] = num1 + " " + num2;
