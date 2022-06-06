@@ -15,24 +15,30 @@ public class Engine {
         Scanner inName = new Scanner(System.in);
         String name = inName.nextLine();
         System.out.println("Hello, " + name + "!");
+        var questionGame2 = 2;
+        var questionGame3 = 3;
+        var questionGame4 = 4;
+        var questionGame5 = 5;
+        var questionGame6 = 6;
+        if (numGame == questionGame2) {
+            conditions = "Answer 'yes' if number even otherwise answer 'no'.";
+        } else if (numGame == questionGame3) {
+            conditions = "What is the result of the expression?";
+        } else if (numGame == questionGame4) {
+            conditions = "Find the greatest common divisor of given numbers.";
+        } else if (numGame == questionGame5) {
+            conditions = "What number is missing in the progression?";
+        } else if (numGame == questionGame6) {
+            conditions = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        }
+        System.out.println(conditions);
+        int attempts = 3;
         var numberGame2 = 2;
         var numberGame3 = 3;
         var numberGame4 = 4;
         var numberGame5 = 5;
         var numberGame6 = 6;
-        if (numGame == numberGame2) {
-            conditions = "Answer 'yes' if number even otherwise answer 'no'.";
-        } else if (numGame == numberGame3) {
-            conditions = "What is the result of the expression?";
-        } else if (numGame == numberGame4) {
-            conditions = "Find the greatest common divisor of given numbers.";
-        } else if (numGame == numberGame5) {
-            conditions = "What number is missing in the progression?";
-        } else if (numGame == numberGame6) {
-            conditions = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        }
-        System.out.println(conditions);
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < attempts; i++) {
             if (numGame == numberGame2) {
                 questionCorrect = Even.question();
             } else if (numGame == numberGame3) {

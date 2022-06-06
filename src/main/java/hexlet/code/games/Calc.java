@@ -2,10 +2,11 @@ package hexlet.code.games;
 public class Calc {
     public static String[] question() {
         String[] result = new String[2];
-        var maxRandom = 100;
+        var maxRandom1 = 100;
+        var maxRandom2 = 100;
         var threeRandom = 3;
-        int random1 = (int) (Math.random() * maxRandom);
-        int random2 = (int) (Math.random() * maxRandom);
+        int random1 = (int) (Math.random() * maxRandom1);
+        int random2 = (int) (Math.random() * maxRandom2);
         int randomMath = (int) (Math.random() * threeRandom);
         String num1 = Integer.toString(random1);
         String num2 = Integer.toString(random2);
