@@ -2,8 +2,8 @@ package hexlet.code.games;
 public class Calc {
     public static String[] question() {
         String[] result = new String[2];
-        int maxRandom = 100;
-        int threeRandom = 3;
+        var maxRandom = 100;
+        var threeRandom = 3;
         int random1 = (int) (Math.random() * maxRandom);
         int random2 = (int) (Math.random() * maxRandom);
         int randomMath = (int) (Math.random() * threeRandom);

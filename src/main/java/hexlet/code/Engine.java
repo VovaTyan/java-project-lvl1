@@ -15,11 +15,11 @@ public class Engine {
         Scanner inName = new Scanner(System.in);
         String name = inName.nextLine();
         System.out.println("Hello, " + name + "!");
-        int numberGame2 = 2;
-        int numberGame3 = 3;
-        int numberGame4 = 4;
-        int numberGame5 = 5;
-        int numberGame6 = 6;
+        var numberGame2 = 2;
+        var numberGame3 = 3;
+        var numberGame4 = 4;
+        var numberGame5 = 5;
+        var numberGame6 = 6;
         if (numGame == numberGame2) {
             conditions = "Answer 'yes' if number even otherwise answer 'no'.";
         } else if (numGame == numberGame3) {
