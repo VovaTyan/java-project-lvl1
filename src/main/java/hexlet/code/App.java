@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.print("Please enter the game number and press Enter.\n1 - Greet\n2 - Even \n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit\nYour choice: ");
+        System.out.print("Welcome to the Brain Games!\nPlease enter the game number and press Enter.\n1 - Greet\n2 - Even \n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit\nYour choice: ");
         String numberGame = in.nextLine();
         if (numberGame.equals("0")) {
             return;
@@ -18,7 +18,7 @@ public class App {
             Engine.gameGames(numGame);
         }
         else {
-            System.out.println("'" + numberGame + "' is wrong. Please enter the game number (1-6) and press Enter!");
+            System.out.println("'" + numberGame + "' is wrong input. Correct input was: 1-6. Let's try again!");
         }
 
     }
