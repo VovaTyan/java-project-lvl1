@@ -1,7 +1,5 @@
 package hexlet.code;
-
 import java.util.Scanner;
-
 public class Cli {
     public static void greetings() {
         System.out.println("\nWelcome to the Brain games!");

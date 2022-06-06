@@ -1,67 +1,57 @@
 package hexlet.code;
-
 import hexlet.code.games.*;
-
 import java.util.Scanner;
-
 public class Engine {
     public static void gameGames(int numGame) {
-        String Conditions = "";
-        String[] question_correct = new String[2];
+        String conditions = "";
+        String[] questionCorrect = new String[2];
         String answer;
         System.out.println("\nWelcome to the Brain games!");
         System.out.print("May I have your name? ");
         Scanner inName = new Scanner(System.in);
         String name = inName.nextLine();
         System.out.println("Hello, " + name + "!");
-        switch (numGame) {
-            case 2:
-                Conditions = "Answer 'yes' if number even otherwise answer 'no'.";
-                break;
-            case 3:
-                Conditions = "What is the result of the expression?";
-                break;
-            case 4:
-                Conditions = "Find the greatest common divisor of given numbers.";
-                break;
-            case 5:
-                Conditions = "What number is missing in the progression?";
-                break;
-            case 6:
-                Conditions = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-                break;
+        int numberGame2 = 2;
+        int numberGame3 = 3;
+        int numberGame4 = 4;
+        int numberGame5 = 5;
+        int numberGame6 = 6;
+        if (numGame == numberGame2) {
+            conditions = "Answer 'yes' if number even otherwise answer 'no'.";
+        } else if (numGame == numberGame3) {
+            conditions = "What is the result of the expression?";
+        } else if (numGame == numberGame4) {
+            conditions = "Find the greatest common divisor of given numbers.";
+        } else if (numGame == numberGame5) {
+            conditions = "What number is missing in the progression?";
+        } else if (numGame == numberGame6) {
+            conditions = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         }
-        System.out.println(Conditions);
+        System.out.println(conditions);
         for (int i = 0; i < 3; i++) {
-            switch (numGame) {
-                case 2:
-                    question_correct = Even.question();
-                    break;
-                case 3:
-                    question_correct = Calc.question();
-                    break;
-                case 4:
-                    question_correct = GCD.question();
-                    break;
-                case 5:
-                    question_correct = Progression.question();
-                    break;
-                case 6:
-                    question_correct = Prime.question();
-                    break;
+            if (numGame == numberGame2) {
+                questionCorrect = Even.question();
+            } else if (numGame == numberGame3) {
+                questionCorrect = Calc.question();
+            } else if (numGame == numberGame4) {
+                questionCorrect = GCD.question();
+            } else if (numGame == numberGame5) {
+                questionCorrect = Progression.question();
+            } else if (numGame == numberGame6) {
+                    questionCorrect = Prime.question();
             }
-            if (question_correct[1] == null) {
-                question_correct[1] = "0";
+            if (questionCorrect[1] == null) {
+                questionCorrect[1] = "0";
             }
-            System.out.println("Question: " + question_correct[0]);
+            System.out.println("Question: " + questionCorrect[0]);
             Scanner in1 = new Scanner(System.in);
             System.out.print("Your answer: ");
             answer = in1.nextLine();
-            if (question_correct[1].equals(answer)) {
+            if (questionCorrect[1].equals(answer)) {
                 System.out.println("Correct!");
-            }
-            else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + question_correct[1] + "'.\nLet's try again, " + name + "!");
+            } else {
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
+                        + questionCorrect[1] + "'.\nLet's try again, " + name + "!");
                 return;
             }
 

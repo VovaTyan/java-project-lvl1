@@ -1,11 +1,12 @@
 package hexlet.code.games;
-
 public class Calc {
     public static String[] question() {
         String[] result = new String[2];
-        int random1 = (int) (Math.random() * 100);
-        int random2 = (int) (Math.random() * 100);
-        int randomMath = (int) (Math.random() * 3);
+        int maxRandom = 100;
+        int threeRandom = 3;
+        int random1 = (int) (Math.random() * maxRandom);
+        int random2 = (int) (Math.random() * maxRandom);
+        int randomMath = (int) (Math.random() * threeRandom);
         String num1 = Integer.toString(random1);
         String num2 = Integer.toString(random2);
         if (randomMath == 0) {
@@ -23,7 +24,6 @@ public class Calc {
             result[0] = num1 + " - " + num2;
             result[1] = Integer.toString(result2);
         }
-
         return result;
     }
 }
