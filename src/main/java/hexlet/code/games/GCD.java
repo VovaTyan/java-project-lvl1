@@ -2,7 +2,7 @@ package hexlet.code.games;
 public class GCD {
     public static String[] question() {
         String[] result = new String[2];
-        var maxInRandom = 100;
+        final int maxInRandom = 100;
 
         var random1 = (int) (Math.random() * maxInRandom);
         var random2 = (int) (Math.random() * maxInRandom);

@@ -2,10 +2,10 @@ package hexlet.code.games;
 public class Progression {
     public static String[] question() {
         String[] result = new String[2];
-        var maxRandom = 100;
-        var maxAmount = 9;
-        var minAmount = 5;
-        var stepRandom = 1;
+        final int maxRandom = 100;
+        final int maxAmount = 9;
+        final int minAmount = 5;
+        final int stepRandom = 1;
 
         int random1 = (int) (Math.random() * maxRandom);
         int step = stepRandom + (int) (Math.random() * maxAmount);

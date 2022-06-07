@@ -2,8 +2,9 @@ package hexlet.code.games;
 public class Prime {
     public static String[] question() {
         String[] result = new String[2];
-        var maxInRandom = 99;
-        var noInPrime = 2;
+        final int maxInRandom = 99;
+
+        final int noInPrime = 2;
 
         var random = 1 + (int) (Math.random() * maxInRandom);
         result[0] = Integer.toString(random);

@@ -15,11 +15,11 @@ public class Engine {
         Scanner inName = new Scanner(System.in);
         String name = inName.nextLine();
         System.out.println("Hello, " + name + "!");
-        var numberInGame2 = 2;
-        var numberInGame3 = 3;
-        var numberInGame4 = 4;
-        var numberInGame5 = 5;
-        var numberInGame6 = 6;
+        final int numberInGame2 = 2;
+        final int numberInGame3 = 3;
+        final int numberInGame4 = 4;
+        final int numberInGame5 = 5;
+        final int numberInGame6 = 6;
 
         if (numGame == numberInGame2) {
             conditions = "Answer 'yes' if number even otherwise answer 'no'.";
@@ -33,7 +33,7 @@ public class Engine {
             conditions = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         }
         System.out.println(conditions);
-        int attempts = 3;
+        final int attempts = 3;
 
         for (int i = 0; i < attempts; i++) {
             if (numGame == numberInGame2) {
