@@ -16,18 +16,19 @@ public class Progression {
             int numberRandom = (int) (Math.random() * numbers);
             int num = random1;
             String numText;
-            String text = "";
+            var text = new StringBuilder();
             for (int i = 0; i <= numbers; i++) {
                 if (i == numberRandom) {
-                    text = text + ".. ";
+                    text.append(".. ");
                     result[j + 1] = Integer.toString(num);
                 } else {
                     numText = Integer.toString(num);
-                    text = text + numText + " ";
+                    text.append(numText);
+                    text.append(" ");
                 }
                 num = num + step;
             }
-            result[j] = text;
+            result[j] = text.toString();
         }
         return result;
     }

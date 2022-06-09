@@ -15,7 +15,7 @@ public class Prime {
                 result[i] = "no";
             }
             for (int j = noInPrime; j < random; j++) {
-                if (((random % j) == 0) && (random != noInPrime)) {
+                if ((random % j) == 0) {
                     result[i + 1] = "no";
                     break;
                 }
