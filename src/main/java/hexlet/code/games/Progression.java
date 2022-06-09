@@ -2,7 +2,7 @@ package hexlet.code.games;
 public class Progression {
     public static String[] question() {
         String[] result = new String[7];
-        result[0] = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        result[0] = "What number is missing in the progression?";
         final int maxRandom = 100;
         final int maxAmount = 9;
         final int minAmount = 5;
