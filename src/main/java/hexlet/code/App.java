@@ -1,12 +1,17 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
 
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        String[] allGameOphions = new String[7];
+        final int inGameOptions = 7;
+        String[] allGameOphions = new String[inGameOptions];
         Scanner in = new Scanner(System.in);
         System.out.print("Welcome to the Brain Games!\nPlease enter the game number and press Enter."
                 + "\n1 - Greet\n2 - Even \n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit\nYour choice: ");

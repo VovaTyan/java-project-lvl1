@@ -20,11 +20,11 @@ public class Engine {
             Scanner in2 = new Scanner(System.in);
             System.out.print("Your answer: ");
             answer = in2.nextLine();
-            if (allGameOphions[i+1].equals(answer)) {
+            if (allGameOphions[i + 1].equals(answer)) {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
-                        + allGameOphions[i+1] + "'.\nLet's try again, " + name + "!");
+                        + allGameOphions[i + 1] + "'.\nLet's try again, " + name + "!");
                 return;
             }
         }

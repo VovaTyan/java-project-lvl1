@@ -1,14 +1,13 @@
 package hexlet.code.games;
 public class Calc {
     public static String[] question() {
-        String[] result = new String[7];
+        final int inGameOptions = 7;
+        String[] result = new String[inGameOptions];
         result[0] = "What is the result of the expression?";
         final int maxInRandom = 100;
         final int threeInRandom = 3;
 
-        int attempts = result.length;
-
-        for (int i = 1; i < attempts; i = i + 2) {
+        for (int i = 1; i < inGameOptions; i = i + 2) {
             int random1 = (int) (Math.random() * maxInRandom);
             int random2 = (int) (Math.random() * maxInRandom);
             int randomMath = (int) (Math.random() * threeInRandom);

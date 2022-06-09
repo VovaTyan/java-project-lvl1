@@ -1,15 +1,15 @@
 package hexlet.code.games;
 public class Progression {
     public static String[] question() {
-        String[] result = new String[7];
+        final int inGameOptions = 7;
+        String[] result = new String[inGameOptions];
         result[0] = "What number is missing in the progression?";
         final int maxRandom = 100;
         final int maxAmount = 9;
         final int minAmount = 5;
         final int stepRandom = 1;
-        int attempts = result.length;
 
-        for (int j = 1; j < attempts; j = j + 2) {
+        for (int j = 1; j < inGameOptions; j = j + 2) {
             int random1 = (int) (Math.random() * maxRandom);
             int step = stepRandom + (int) (Math.random() * maxAmount);
             int numbers = minAmount + (int) (Math.random() * maxAmount);
@@ -20,7 +20,7 @@ public class Progression {
             for (int i = 0; i <= numbers; i++) {
                 if (i == numberRandom) {
                     text = text + ".. ";
-                    result[j+1] = Integer.toString(num);
+                    result[j + 1] = Integer.toString(num);
                 } else {
                     numText = Integer.toString(num);
                     text = text + numText + " ";
