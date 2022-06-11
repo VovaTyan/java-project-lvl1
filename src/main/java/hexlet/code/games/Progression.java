@@ -1,7 +1,10 @@
 package hexlet.code.games;
+
+import hexlet.code.Engine;
+
 public class Progression {
-    public static String[] question() {
-        final int inGameOptions = 7;
+    public static void question() {
+        final int inGameOptions = 6;
         String[] result = new String[inGameOptions];
         result[0] = "What number is missing in the progression?";
         final int maxRandom = 100;
@@ -9,7 +12,8 @@ public class Progression {
         final int minAmount = 5;
         final int stepRandom = 1;
 
-        for (int j = 1; j < inGameOptions; j = j + 2) {
+        String condition = "What number is missing in the progression?";
+        for (int j = 0; j < inGameOptions; j = j + 2) {
             int random1 = (int) (Math.random() * maxRandom);
             int step = stepRandom + (int) (Math.random() * maxAmount);
             int numbers = minAmount + (int) (Math.random() * maxAmount);
@@ -30,6 +34,6 @@ public class Progression {
             }
             result[j] = text.toString();
         }
-        return result;
+        Engine.gameGames(condition, result);
     }
 }

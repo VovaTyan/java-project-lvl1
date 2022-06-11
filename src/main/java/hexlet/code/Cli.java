@@ -8,6 +8,5 @@ public class Cli {
         String name = in1.nextLine();
         in1.close();
         System.out.println("Hello, " + name + "!");
-        in1.close();
     }
 }

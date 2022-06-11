@@ -2,17 +2,17 @@ package hexlet.code;
 
 import java.util.Scanner;
 public class Engine {
-    public static void gameGames(String[] allGameParams) {
+    public static void gameGames(String condition, String[] allGameParams) {
         String answer;
         System.out.println("\nWelcome to the Brain games!");
         System.out.print("May I have your name? ");
         Scanner inName = new Scanner(System.in);
         String name = inName.nextLine();
         System.out.println("Hello, " + name + "!");
-        System.out.println(allGameParams[0]);
         int attempts = allGameParams.length;
 
-        for (int i = 1; i < attempts; i = i + 2) {
+        System.out.println(condition);
+        for (int i = 0; i < attempts; i = i + 2) {
             if (allGameParams[i] == null) {
                 allGameParams[i] = "0";
             }

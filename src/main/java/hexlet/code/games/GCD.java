@@ -1,12 +1,15 @@
 package hexlet.code.games;
+
+import hexlet.code.Engine;
+
 public class GCD {
-    public static String[] question() {
-        final int inGameOptions = 7;
+    public static void question() {
+        final int inGameOptions = 6;
         String[] result = new String[inGameOptions];
-        result[0] = "Find the greatest common divisor of given numbers.";
         final int maxInRandom = 100;
 
-        for (int i = 1; i < inGameOptions; i = i + 2) {
+        String condition = "Find the greatest common divisor of given numbers.";
+        for (int i = 0; i < inGameOptions; i = i + 2) {
             var random1 = (int) (Math.random() * maxInRandom);
             var random2 = (int) (Math.random() * maxInRandom);
             String num1 = Integer.toString(random1);
@@ -19,6 +22,6 @@ public class GCD {
                 }
             }
         }
-        return result;
+        Engine.gameGames(condition, result);
     }
 }

@@ -10,39 +10,36 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        final int inGameParams = 7;
-        String[] allGameOphions = new String[inGameParams];
         Scanner in = new Scanner(System.in);
         System.out.print("Welcome to the Brain Games!\nPlease enter the game number and press Enter."
                 + "\n1 - Greet\n2 - Even \n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit\nYour choice: ");
         String numberGame = in.nextLine();
-        if (numberGame.equals("0")) {
-            return;
-        }
-        if (numberGame.equals("1")) {
-            Cli.greetings();
-            return;
-        }
+
         switch (numberGame) {
+            case "0":
+                return;
+            case "1":
+                Cli.greetings();
+                return;
             case "2":
-                allGameOphions = Even.question();
+                Even.question();
                 break;
             case "3":
-                allGameOphions = Calc.question();
+                Calc.question();
                 break;
             case "4":
-                allGameOphions = GCD.question();
+                GCD.question();
                 break;
             case "5":
-                allGameOphions = Progression.question();
+                Progression.question();
                 break;
             case "6":
-                allGameOphions = Prime.question();
+                Prime.question();
                 break;
             default:
                 System.out.println("'" + numberGame + "' is wrong input. Correct input was: 1-6. Let's try again!");
-                return;
+                break;
         }
-        Engine.gameGames(allGameOphions);
+        in.close();
     }
 }
