@@ -13,9 +13,6 @@ public class Engine {
 
         System.out.println(condition);
         for (int i = 0; i < attempts; i = i + 2) {
-            if (allGameParams[i] == null) {
-                allGameParams[i] = "0";
-            }
             System.out.println("Question: " + allGameParams[i]);
             Scanner in2 = new Scanner(System.in);
             System.out.print("Your answer: ");
@@ -25,6 +22,7 @@ public class Engine {
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
                         + allGameParams[i + 1] + "'.\nLet's try again, " + name + "!");
+                in2.close();
                 return;
             }
         }
