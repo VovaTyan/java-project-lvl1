@@ -22,19 +22,19 @@ public class App {
                 Cli.greetings();
                 return;
             case "2":
-                Even.question();
+                Even.startGame();
                 break;
             case "3":
-                Calc.question();
+                Calc.startGame();
                 break;
             case "4":
-                GCD.question();
+                GCD.startGame();
                 break;
             case "5":
-                Progression.question();
+                Progression.startGame();
                 break;
             case "6":
-                Prime.question();
+                Prime.startGame();
                 break;
             default:
                 System.out.println("'" + numberGame + "' is wrong input. Correct input was: 1-6. Let's try again!");

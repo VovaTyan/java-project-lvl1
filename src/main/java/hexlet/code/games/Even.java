@@ -1,21 +1,20 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Even {
-    public static void question() {
-        final int inGameOptions = 6;
-        String[] result = new String[inGameOptions];
-        final int maxInRandom = 100;
-
+    static final int inGameOptions = 3;
+    public static void startGame() {
+        String[][] result = new String[inGameOptions][2];
         String condition = "Answer 'yes' if number even otherwise answer 'no'.";
-        for (int i = 0; i < inGameOptions; i = i + 2) {
-            var random = (int) (Math.random() * maxInRandom);
-            result[i] = Integer.toString(random);
+        for (int i = 0; i < inGameOptions; i++) {
+            int random = Utils.intRandom(1, 100);
+            result[i][0] = Integer.toString(random);
             if ((random % 2) == 0) {
-                result[i + 1] = "yes";
+                result[i][1] = "yes";
             } else {
-                result[i + 1] = "no";
+                result[i][1] = "no";
             }
         }
         Engine.gameGames(condition, result);
