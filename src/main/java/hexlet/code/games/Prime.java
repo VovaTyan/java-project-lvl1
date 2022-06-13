@@ -6,7 +6,7 @@ import hexlet.code.Utils;
 public class Prime {
     static final int LAPS_GAME = 3;
     static final int MAX_RANDOM = 100;
-    static final int noInPrime = 2;
+    static final int NO_IN_PRIME = 2;
     public static void startGame() {
         String[][] result = new String[LAPS_GAME][2];
 
@@ -16,10 +16,10 @@ public class Prime {
             var random = Utils.intRandom(1, MAX_RANDOM);
             result[i][0] = Integer.toString(random);
             result[i][1] = "yes";
-            if (random < noInPrime) {
+            if (random < NO_IN_PRIME) {
                 result[i][0] = "no";
             }
-            for (int j = noInPrime; j < random; j++) {
+            for (int j = NO_IN_PRIME; j < random; j++) {
                 if ((random % j) == 0) {
                     result[i][1] = "no";
                     break;

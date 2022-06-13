@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Calc {
-    private static final String[] Maths = {" * ", " + ", " - "};
+    private static final String[] MATHS = {" * ", " + ", " - "};
     public static int calculate(int number1, int number2, String math) {
         int result = 0;
         switch (math) {
@@ -34,10 +34,9 @@ public class Calc {
             int randomMath = Utils.intRandom(0, 2);
             String num1 = Integer.toString(random1);
             String num2 = Integer.toString(random2);
-            String randomMathStr = Maths[randomMath];
+            String randomMathStr = MATHS[randomMath];
             int result0 = calculate(random1, random2, randomMathStr);
-
-                result[i][0] = num1 + Maths[randomMath] + num2;
+                result[i][0] = num1 + MATHS[randomMath] + num2;
                 result[i][1] = Integer.toString(result0);
         }
         Engine.gameGames(condition, result);
