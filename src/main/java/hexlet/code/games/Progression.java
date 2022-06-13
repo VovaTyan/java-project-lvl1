@@ -4,16 +4,17 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Progression {
-    static final int inGameOptions = 3;
+    static final int LAPS_GAME = 3;
+    static final int MAX_RANDOM = 100;
     public static void startGame() {
-        String[][] result = new String[inGameOptions][2];
+        String[][] result = new String[LAPS_GAME][2];
         final int maxAmount = 9;
         final int minAmount = 5;
         final int stepRandom = 1;
 
         String condition = "What number is missing in the progression?";
-        for (int j = 0; j < inGameOptions; j++) {
-            int random1 = Utils.intRandom(1, 100);
+        for (int j = 0; j < LAPS_GAME; j++) {
+            int random1 = Utils.intRandom(1, MAX_RANDOM);
             int step = stepRandom + (int) (Math.random() * maxAmount);
             int numbers = minAmount + (int) (Math.random() * maxAmount);
             int numberRandom = (int) (Math.random() * numbers);

@@ -4,7 +4,6 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Calc {
-//    static final int inGameOptions = 6;
     private static final String[] Maths = {" * ", " + ", " - "};
     public static int calculate(int number1, int number2, String math) {
         int result = 0;
@@ -24,14 +23,14 @@ public class Calc {
         }
         return result;
     }
-    static final int RAUND = 3;
-    static final int MaxRandom = 100;
+    static final int LAPS_GAME = 3;
+    static final int MAX_RANDOM = 100;
         public static void startGame() {
-        String[][] result = new String[RAUND][2];
+        String[][] result = new String[LAPS_GAME][2];
         String condition = "What is the result of the expression?";
-        for (int i = 0; i < RAUND; i++) {
-            int random1 = Utils.intRandom(1, MaxRandom);
-            int random2 = Utils.intRandom(1, MaxRandom);
+        for (int i = 0; i < LAPS_GAME; i++) {
+            int random1 = Utils.intRandom(1, MAX_RANDOM);
+            int random2 = Utils.intRandom(1, MAX_RANDOM);
             int randomMath = Utils.intRandom(0, 2);
             String num1 = Integer.toString(random1);
             String num2 = Integer.toString(random2);

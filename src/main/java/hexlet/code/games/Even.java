@@ -4,13 +4,13 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Even {
-    static final int InGameOptions = 3;
-    static final int MaxRandom = 100;
+    static final int LAPS_GAME = 3;
+    static final int MAX_RANDOM = 100;
     public static void startGame() {
-        String[][] result = new String[InGameOptions][2];
+        String[][] result = new String[LAPS_GAME][2];
         String condition = "Answer 'yes' if number even otherwise answer 'no'.";
-        for (int i = 0; i < InGameOptions; i++) {
-            int random = Utils.intRandom(1, MaxRandom);
+        for (int i = 0; i < LAPS_GAME; i++) {
+            int random = Utils.intRandom(1, MAX_RANDOM);
             result[i][0] = Integer.toString(random);
             if ((random % 2) == 0) {
                 result[i][1] = "yes";
