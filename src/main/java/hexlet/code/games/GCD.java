@@ -4,13 +4,12 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class GCD {
-    static final int LAPS_GAME = 3;
     static final int MAX_RANDOM = 100;
+    private static final String CONDITION = "Find the greatest common divisor of given numbers.";
     public static void startGame() {
-        String[][] result = new String[LAPS_GAME][2];
+        String[][] result = new String[Engine.COUNT_ROUNDS][2];
 
-        String condition = "Find the greatest common divisor of given numbers.";
-        for (int i = 0; i < LAPS_GAME; i++) {
+        for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
             var random1 = Utils.intRandom(1, MAX_RANDOM);
             var random2 = Utils.intRandom(1, MAX_RANDOM);
             String num1 = Integer.toString(random1);
@@ -23,6 +22,6 @@ public class GCD {
                 }
             }
         }
-        Engine.gameGames(condition, result);
+        Engine.startGame(CONDITION, result);
     }
 }
