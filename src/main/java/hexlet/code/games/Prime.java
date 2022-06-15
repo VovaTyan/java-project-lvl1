@@ -4,10 +4,9 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Prime {
-
     static final int MAX_RANDOM = 100;
     private static final int NO_IN_PRIME = 2;
-    private static boolean prime (int number) {
+    private static boolean prime(int number) {
         boolean result = (number >= NO_IN_PRIME);
         for (int j = NO_IN_PRIME; j < Math.sqrt(number); j++) {
             if ((number % j) == 0) {

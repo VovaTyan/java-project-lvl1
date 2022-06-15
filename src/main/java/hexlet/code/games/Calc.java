@@ -20,6 +20,7 @@ public class Calc {
             case " / ":
                 System.out.println("No logic set");
                 break;
+            default:
         }
         return result;
     }

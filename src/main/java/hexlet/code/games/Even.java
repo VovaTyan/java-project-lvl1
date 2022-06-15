@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Even {
-    private static boolean honest (int number) {
+    private static boolean honest(int number) {
         return number % 2 == 0;
     }
     private static final int MAX_RANDOM = 100;
