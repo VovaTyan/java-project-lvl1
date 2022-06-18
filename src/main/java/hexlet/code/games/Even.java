@@ -6,7 +6,7 @@ public class Even {
         return number % 2 == 0;
     }
     private static final int MAX_RANDOM = 100;
-    private static final String CONDITION = "Answer 'yes' if number even otherwise answer 'no'.";
+    private static final String DESCRIPTION = "Answer 'yes' if number even otherwise answer 'no'.";
     public static void startGame() {
         String[][] result = new String[Engine.COUNT_ROUNDS][2];
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
@@ -14,6 +14,6 @@ public class Even {
             result[i][0] = Integer.toString(random);
             result[i][1] = (isEven(random)) ? "yes" : "no";
         }
-        Engine.startGame(CONDITION, result);
+        Engine.startGame(DESCRIPTION, result);
     }
 }
