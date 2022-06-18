@@ -20,8 +20,7 @@ public class Progression {
             int step = Utils.intRandom(1, MAX_STEP);
             int numbers = MIN_AMOUNT + Utils.intRandom(1, MAX_STEP);
             int numberRandom = (int) (Math.random() * numbers);
-            String[] arrays = new String[numbers];
-            arrays = progression(random1, step, numbers);
+            String[] arrays = progression(random1, step, numbers);
             result[j][1] = progression(random1, step, numbers)[numberRandom];
             arrays[numberRandom] = "..";
             result[j][0] = String.join(" ", arrays);
