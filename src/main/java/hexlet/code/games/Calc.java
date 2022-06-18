@@ -27,7 +27,7 @@ public class Calc {
 
 
         public static void startGame() {
-        String[][] result = new String[Engine.COUNT_ROUNDS][2];
+        String[][] gameData = new String[Engine.COUNT_ROUNDS][2];
 
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
             int random1 = Utils.intRandom(1, MAX_RANDOM);
@@ -38,9 +38,9 @@ public class Calc {
             String randomMathStr = OPERATIONS[randomMath];
             int result0 = calculate(random1, random2, randomMathStr);
 
-                result[i][0] = num1 + OPERATIONS[randomMath] + num2;
-                result[i][1] = Integer.toString(result0);
+                gameData[i][0] = num1 + OPERATIONS[randomMath] + num2;
+                gameData[i][1] = Integer.toString(result0);
         }
-        Engine.startGame(DESCRIPTION, result);
+        Engine.startGame(DESCRIPTION, gameData);
     }
 }

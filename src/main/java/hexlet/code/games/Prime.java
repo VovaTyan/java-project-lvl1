@@ -17,12 +17,12 @@ public class Prime {
         return result;
     }
     public static void startGame() {
-        String[][] result = new String[Engine.COUNT_ROUNDS][2];
+        String[][] gameData = new String[Engine.COUNT_ROUNDS][2];
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
             var random = Utils.intRandom(1, MAX_RANDOM);
-            result[i][0] = Integer.toString(random);
-            result[i][1] = isPrime(random) ? "yes" : "no";
+            gameData[i][0] = Integer.toString(random);
+            gameData[i][1] = isPrime(random) ? "yes" : "no";
         }
-        Engine.startGame(DESCRIPTION, result);
+        Engine.startGame(DESCRIPTION, gameData);
     }
 }
