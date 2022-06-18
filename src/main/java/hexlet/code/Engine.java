@@ -7,14 +7,13 @@ public class Engine {
         String answer;
         System.out.println("\nWelcome to the Brain games!");
         System.out.print("May I have your name? ");
-        Scanner inName = new Scanner(System.in);
-        String name = inName.nextLine();
+        Scanner in = new Scanner(System.in);
+        String name = in.nextLine();
         System.out.println("Hello, " + name + "!");
 
         System.out.println(condition);
         for (int i = 0; i < COUNT_ROUNDS; i++) {
             System.out.println("Question: " + allGameParams[i][0]);
-            Scanner in = new Scanner(System.in);
             System.out.print("Your answer: ");
             answer = in.nextLine();
             if (allGameParams[i][1].equals(answer)) {

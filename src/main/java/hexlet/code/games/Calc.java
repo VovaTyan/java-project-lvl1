@@ -5,6 +5,8 @@ import hexlet.code.Utils;
 
 public class Calc {
     private static final String[] OPERATIONS = {" * ", " + ", " - "};
+    private static final int MAX_RANDOM = 100;
+    private static final String CONDITION = "What is the result of the expression?";
     public static int calculate(int number1, int number2, String operation) {
         int result = 0;
         switch (operation) {
@@ -17,16 +19,13 @@ public class Calc {
             case " - ":
                 result = number1 - number2;
                 break;
-            case " / ":
-                System.out.println("No logic set");
-                break;
             default:
+                System.out.println("No logic defined for the " + operation + " operator");
         }
         return result;
     }
 
-    static final int MAX_RANDOM = 100;
-    private static final String CONDITION = "What is the result of the expression?";
+
         public static void startGame() {
         String[][] result = new String[Engine.COUNT_ROUNDS][2];
 

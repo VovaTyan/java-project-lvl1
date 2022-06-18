@@ -1,10 +1,8 @@
 package hexlet.code.games;
-
 import hexlet.code.Engine;
 import hexlet.code.Utils;
-
 public class Even {
-    private static boolean honest(int number) {
+    private static boolean isEven(int number) {
         return number % 2 == 0;
     }
     private static final int MAX_RANDOM = 100;
@@ -14,7 +12,7 @@ public class Even {
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
             int random = Utils.intRandom(1, MAX_RANDOM);
             result[i][0] = Integer.toString(random);
-            result[i][1] = (honest(random)) ? "yes" : "no";
+            result[i][1] = (isEven(random)) ? "yes" : "no";
         }
         Engine.startGame(CONDITION, result);
     }
