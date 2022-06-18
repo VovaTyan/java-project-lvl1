@@ -6,7 +6,7 @@ import hexlet.code.Utils;
 public class Calc {
     private static final String[] OPERATIONS = {" * ", " + ", " - "};
     private static final int MAX_RANDOM = 100;
-    private static final String CONDITION = "What is the result of the expression?";
+    private static final String DESCRIPTION = "What is the result of the expression?";
     public static int calculate(int number1, int number2, String operation) {
         int result = 0;
         switch (operation) {
@@ -41,6 +41,6 @@ public class Calc {
                 result[i][0] = num1 + OPERATIONS[randomMath] + num2;
                 result[i][1] = Integer.toString(result0);
         }
-        Engine.startGame(CONDITION, result);
+        Engine.startGame(DESCRIPTION, result);
     }
 }
