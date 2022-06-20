@@ -16,21 +16,22 @@ public class Progression {
     public static void startGame() {
         String[][] gameData = new String[Engine.COUNT_ROUNDS][2];
         for (int j = 0; j < Engine.COUNT_ROUNDS; j++) {
-            int random1 = Utils.intRandom(1, MAX_RANDOM);
+            int firstElement = Utils.intRandom(1, MAX_RANDOM);
             int step = Utils.intRandom(1, MAX_STEP);
-            int numbers = MIN_AMOUNT + Utils.intRandom(1, MAX_STEP);
-            int numberRandom = (int) (Math.random() * numbers);
-            gameData[j][1] = Integer.toString(progression(random1, step, numbers)[numberRandom]);
+            int numbersCount = MIN_AMOUNT + Utils.intRandom(1, MAX_STEP);
+            int numberRandom = (int) (Math.random() * numbersCount);
+            int[] progressionRound = progression(firstElement, step, numbersCount);
             var question = new StringBuilder();
-            for (int i = 0; i < numbers; i++) {
+            for (int i = 0; i < numbersCount; i++) {
                 if (i != numberRandom) {
-                    question.append(progression(random1, step, numbers)[i]);
+                    question.append(progressionRound[i]);
                 } else {
                     question.append("..");
                 }
                 question.append(" ");
             }
             gameData[j][0] = question.toString();
+            gameData[j][1] = Integer.toString(progressionRound[numberRandom]);
         }
         Engine.startGame(DESCRIPTION, gameData);
     }

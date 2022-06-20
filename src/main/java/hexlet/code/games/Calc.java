@@ -25,7 +25,6 @@ public class Calc {
         return result;
     }
 
-
         public static void startGame() {
         String[][] gameData = new String[Engine.COUNT_ROUNDS][2];
 
